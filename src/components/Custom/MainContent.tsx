@@ -1,7 +1,5 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { ArrowUpRight, ArrowDownRight, ChevronDown } from "lucide-react";
+import {  ChevronDown } from "lucide-react";
 import StatsCard from "./StatsCard";
-import PieChart from "./PieChart";
 import PieChartComp from "./PieChart";
 import BarChartComp from "./BarChart";
 import LineGraph from "./LineGraph";
