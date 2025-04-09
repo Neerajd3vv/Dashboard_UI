@@ -1,12 +1,13 @@
+import { useState } from "react";
 interface types {
   label: string;
   icon: React.ReactNode;
   children: React.ReactNode;
-  isOpen: boolean;
-  setIsOpen: (isOpen: boolean) => void;
 }
 import { ChevronRight, ChevronDown } from "lucide-react";
-function CollapsableNav({ label, icon, children, isOpen, setIsOpen }: types) {
+function CollapsableNav({ label, icon, children }: types) {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div className="w-full space-y-2">
       <button

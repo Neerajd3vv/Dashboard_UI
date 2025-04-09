@@ -1,8 +1,5 @@
 import { Bug, UserRound, Radio } from "lucide-react";
-import Myself from "../../../public/myself.jpg";
-import Style from "../../../public/style.jpg";
-import Another from "../../../public/test_selfie.jpg";
-import Myself2 from "../../../public/prefer1.jpg";
+
 const notification = [
   {
     id: 1,
@@ -33,31 +30,31 @@ const notification = [
 const activities = [
   {
     id: 1,
-    img: Style,
+    img: "/test_selfie.jpg",
     title: "Changed the style",
     timing: "Just now",
   },
   {
     id: 2,
-    img: Myself,
+    img: "/myself.jpg",
     title: "Released a new version",
     timing: "59 minutes ago",
   },
   {
     id: 3,
-    img: Another,
+    img: "/test_selfie.jpg",
     title: "Submitted a bug",
     timing: "12 hours ago",
   },
   {
     id: 4,
-    img: Myself2,
+    img: "/prefer1.jpg",
     title: "Modified A data in Page X",
     timing: "Toaday, 11:59 AM",
   },
   {
     id: 5,
-    img: Style,
+    img: "/style.jpg",
     title: "Deleted a page in Project X",
     timing: "Feb 2, 2025",
   },
@@ -92,7 +89,7 @@ const contacts = [
 
 function RightSidebar() {
   return (
-    <div className="w-[350px] min-h-screen border-l p-5 space-y-4  border-slate-200 flex flex-col justify-start ">
+    <div className="w-[380px] min-h-screen border-l p-5 space-y-6  border-slate-100 flex flex-col justify-start ">
       <div className="flex flex-col text-xs space-y-3  text-[#36454F]">
         <h3 className="font-medium text-black">Notifications</h3>
         <div className="flex flex-col space-y-3 flex-wrap  ">
@@ -142,14 +139,16 @@ function RightSidebar() {
             <li key={item.id} className="flex space-x-2 items-start">
               <div className="w-[23px] h-[23px] overflow-hidden rounded-full">
                 <img
-                  src={Myself}
+                  src="/myself.jpg"
                   alt="pfp"
                   width={23}
                   height={23}
                   className="object-cover"
                 />
               </div>
-              <h4 className="font-medium">{item.name}</h4>
+              <a href="/" className="block font-medium hover:underline">
+                {item.name}
+              </a>
             </li>
           ))}
         </ul>
