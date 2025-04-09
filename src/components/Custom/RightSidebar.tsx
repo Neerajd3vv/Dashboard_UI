@@ -113,14 +113,22 @@ function RightSidebar() {
         <div className="flex flex-col space-y-3 flex-wrap  ">
           {activities.map((item) => (
             <div key={item.id} className="flex space-x-2 items-start ">
-              <div className="w-[23px] h-[23px] overflow-hidden rounded-full">
-                <img
-                  src={item.img}
-                  alt="pfp"
-                  width={23}
-                  height={23}
-                  className="object-cover"
-                />
+              <div className="flex flex-col items-center ">
+                <div className="w-[23px] h-[23px] overflow-hidden rounded-full">
+                  <img
+                    src={item.img}
+                    alt="pfp"
+                    width={23}
+                    height={23}
+                    className="object-cover"
+                  />
+                </div>
+                {item.id < 5 && (
+                  <div
+                    className="h-3 mt-1 bg-zinc-300"
+                    style={{ width: "0.7px" }}
+                  />
+                )}
               </div>
               <div>
                 <h4 className="font-medium ">{item.title}</h4>
